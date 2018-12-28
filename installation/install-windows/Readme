@@ -1,0 +1,9 @@
+> python get-pip.py
+
+> python
+>>> import pip
+>>>
+
+> python -m pip install mysql-connector
+> python -m pip install cherrypy
+> python -m pip install mako

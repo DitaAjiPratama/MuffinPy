@@ -1,19 +1,28 @@
+WelcomeText = """
+    Muffin.Digital Present
+     _______         ___   ___ __         ______
+    |   |   |.--.--.'  _|.'  _|__|.-----.|   __ \.--.--.
+    |       ||  |  |   _||   _|  ||     ||    __/|  |  |
+    |__|_|__||_____|__|  |__| |__||__|__||___|   |___  |
+                                                 |_____|
+
+    Super Easy, Super Clean.
+
+    Created by:
+    Dita Aji Pratama
+
+    Collaborators:
+    <null>
 """
-Muffin.Digital Present
- _______         ___   ___ __         ______
-|   |   |.--.--.'  _|.'  _|__|.-----.|   __ \.--.--.
-|       ||  |  |   _||   _|  ||     ||    __/|  |  |
-|__|_|__||_____|__|  |__| |__||__|__||___|   |___  |
-                                             |_____|
 
-Super Easy, Super Clean.
+MuffinPyUsage = """
+    Usage:
+    python<ver> muffin.py <ipaddress> <port> <service_name>
 
-Created by:
-Dita Aji Pratama
+    You can add nohup to run it on background.
 
-Collaborators:
-<null>
-
+    For example:
+    nohup python3.6 muffin.py 127.0.0.1 15000 MUFFINAPPS &
 """
 
 import sys
@@ -33,6 +42,9 @@ if __name__ == '__main__':
     update      = config.update
 
     if len(sys.argv) >= 3:
+
+        print (WelcomeText)
+
         update["server.socket_host"]    = sys.argv[1]
         update["server.socket_port"]    = int(sys.argv[2])
 
@@ -40,4 +52,5 @@ if __name__ == '__main__':
         cherrypy.quickstart     ( tin.tin(), config=dirconfig    )
 
     else:
-        print "usage: python muffin.py <ipaddress> <port>"
+        print (WelcomeText)
+        print (MuffinPyUsage)

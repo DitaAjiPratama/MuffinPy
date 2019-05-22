@@ -1,7 +1,7 @@
 """
-+-------+
-| crock |
-+-------+
++-----+
+| tin |
++-----+
 Cook your muffins on here
 
 """
@@ -14,7 +14,7 @@ from mako.template import Template
 from core import database
 from core import directory
 
-class crock:
+class tin:
 
     def index(self, **kwargs):
 

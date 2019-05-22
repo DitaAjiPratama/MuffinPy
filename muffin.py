@@ -21,7 +21,7 @@ import os.path
 
 import cherrypy
 
-import crock
+import tin
 
 # core modules
 from core import config
@@ -37,7 +37,7 @@ if __name__ == '__main__':
         update["server.socket_port"]    = int(sys.argv[2])
 
         cherrypy.config.update  ( update                             )
-        cherrypy.quickstart     ( crock.crock(), config=dirconfig    )
+        cherrypy.quickstart     ( tin.tin(), config=dirconfig    )
 
     else:
         print "usage: python muffin.py <ipaddress> <port>"

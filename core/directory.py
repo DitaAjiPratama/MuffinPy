@@ -8,7 +8,7 @@ Keep all your directory on here
 
 import os
 
-html = "static/pages/"
+html = "static/pages"
 
 # Directory config for muffin.py
 dirconfig = {

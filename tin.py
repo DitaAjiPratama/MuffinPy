@@ -16,6 +16,11 @@ from core import directory
 
 class tin:
 
+class tin(config.web):
+
+    def __init__(self):
+        config.web.__init__(self)
+
     def index(self, **kwargs):
 
         tulisan = "World"

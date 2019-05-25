@@ -15,12 +15,9 @@
 """
 
 import sys
-
 import cherrypy
-
 import tin
 
-# core modules
 from core import config
 from core import directory
 

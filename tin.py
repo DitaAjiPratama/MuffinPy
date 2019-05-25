@@ -6,15 +6,12 @@ Cook your muffins on here
 
 """
 
-import mysql.connector as mariadb
-
-from mako.template import Template
-
 # core modules
-from core import database
+from core import config
 from core import directory
 
 from modules import home
+from modules import select_sample
 
 class tin(config.web):
 
@@ -23,21 +20,18 @@ class tin(config.web):
 
     def index(self, **kwargs):
 
-        tulisan = "World"
-
-        return Template(filename=directory.html+"index.html").render(testing=tulisan)
+        kwargs["tulisan1"] = "your"
+        kwargs["tulisan2"] = "Name"
+        kwargs["html"] = self.html_pages["index.html"]
+        html_page = home.home().html(kwargs)
+        return html_page
 
     index.exposed = True
 
     def sample(self, **kwargs):
 
-        cursor = database.mariadb_contoh.cursor()
-        cursor.execute("SELECT * FROM testing")
-
-        list = ""
-        for nama, telp in cursor:
-            list = list + ("Nama: {}, Telp: {} <br>").format(nama,telp)
-
-        return list
+        kwargs["html"] = self.html_pages["select_sample.html"]
+        html_page = select_sample.select_sample().html(kwargs)
+        return html_page
 
     sample.exposed = True

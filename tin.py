@@ -14,7 +14,7 @@ from mako.template import Template
 from core import database
 from core import directory
 
-class tin:
+from modules import home
 
 class tin(config.web):
 

@@ -24,6 +24,8 @@ A Python Web Framework. Focus on easy code and clean framework.
 
 # Menjalankan aplikasi
 
+python muffin.py <IP_Adress> <Port> <Name>
+
 Contoh cara menjalankan: 
 python muffin.py 127.0.0.1 15000 DITAAJIPRATAMA
 

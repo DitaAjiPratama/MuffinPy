@@ -1,5 +1,12 @@
 # MuffinPy
-A Tasty Python Web Framework
+A Python Web Framework. Focus on easy code and clean framework.
+
+# Tahap install Muffin Py di linux
+
+1. ketik pip install --upgrade pip
+2. ketik pip install mysql-connector
+3. ketik pip install cherrypy
+4. ketik pip install mako
 
 # Tahap install Muffin Py di windows
 

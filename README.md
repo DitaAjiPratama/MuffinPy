@@ -1,5 +1,5 @@
 # MuffinPy
-A Python Web Framework. Focus on easy code and clean framework.
+A Python Web Framework. Focus on easy code and clean framework. Made with cherrypy and mako.
 
 # Tahap install Muffin Py di linux
 

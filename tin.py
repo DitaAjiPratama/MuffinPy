@@ -1,17 +1,8 @@
-"""
-+-----+
-| tin |
-+-----+
-Cook your muffins on here
-
-"""
-
-# core modules
 from core import config
 from core import directory
 
 from modules import home
-from modules import select_sample
+# from modules import select_sample
 
 class tin(config.web):
 
@@ -34,4 +25,4 @@ class tin(config.web):
         html_page = select_sample.select_sample().html(kwargs)
         return html_page
 
-    sample.exposed = True
+    sample.exposed = False

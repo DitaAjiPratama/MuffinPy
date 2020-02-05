@@ -1,5 +1,6 @@
 from core   import web
 from config import directory
+from config import server
 
 from modules import home
 from modules import select_sample
@@ -10,8 +11,8 @@ class handler(web.web):
         web.web.__init__(self)
 
     def index(self, **kwargs):
-        kwargs["tulisan1"] = "your"
-        kwargs["tulisan2"] = "Name"
+        kwargs["tulisan1"] = server.FirstName
+        kwargs["tulisan2"] = server.LastName
         kwargs["html"] = self.html_pages["index.html"]
         return home.home().html(kwargs)
     index.exposed = True

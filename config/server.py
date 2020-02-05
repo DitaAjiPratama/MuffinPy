@@ -4,3 +4,7 @@ update = {
     'engine.autoreload.on'      : True          ,
     'request.show_tracebacks'   : False         ,
 }
+
+# Public Variable
+FirstName   = "Your"
+LastName    = "name"

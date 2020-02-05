@@ -1,12 +1,10 @@
 <table border="1">
   <tr>
-    <th>Name</th>
-    <th>Phone</th>
+    <th>Database</th>
   </tr>
   % for prompt in cursor:
   <tr>
     <td>${prompt[0]}</td>
-    <td>${prompt[1]}</td>
   </tr>
   % endfor
 </table>

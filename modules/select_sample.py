@@ -1,7 +1,6 @@
-import mysql.connector as mariadb
-from mako.template import Template
-
-from core import database
+import  mysql.connector     as      mariadb
+from    mako.template       import  Template
+from    config              import  database
 
 class select_sample:
 
@@ -13,8 +12,8 @@ class select_sample:
 
         html_page = params['html']
 
-        cursor = database.mariadb_contoh.cursor()
-        cursor.execute("SELECT * FROM testing")
+        cursor = database.sample_db.cursor()
+        cursor.execute("SHOW DATABASES")
         listing = list(cursor)
 
         return Template(html_page).render(

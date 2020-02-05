@@ -1,6 +1,6 @@
-import sys
-import os
-from core import directory
+import  sys
+import  os
+from    config import directory
 
 class html:
 

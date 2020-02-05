@@ -2,8 +2,8 @@ import mysql.connector as mariadb
 
 sample_db = mariadb.connect(
     host      = "localhost"     ,
-    user      = "aji"           ,
-    password  = "pratama111"    ,
+    user      = "root"           ,
+    password  = ""    ,
     database  = "mysql"
 )
 

@@ -10,11 +10,14 @@ sh install-modules.sh
 \> python get-pip.py
 
 \> python
+
 \>\>\> import pip
 
 
 \> python -m pip install mysql-connector
+
 \> python -m pip install cherrypy
+
 \> python -m pip install mako
 
 Change html = "C:\Your_Directory_Project_Folder\static\pages\\" in config/directory.py

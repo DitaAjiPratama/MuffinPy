@@ -1,33 +1,45 @@
 # MuffinPy
 A Python Web Framework. Focus on easy code and clean framework. Made with cherrypy and mako.
 
-# Tahap install Muffin Py di linux
+# Installation MuffinPy in Linux
 
-1. ketik pip install --upgrade pip
-2. ketik pip install mysql-connector
-3. ketik pip install cherrypy
-4. ketik pip install mako
+sh install-modules.sh
 
-# Tahap install Muffin Py di windows
+# Installation MuffinPy in Windows
 
-1. Install Python 2.7. Terbaru untuk windows
-2. Buka CMD lalu ketik cd C:\Python27
-3. ketik python
-4. ketik import pip
-5. exit()
-6. ketik python -m pip install --upgrade pip
-7. ketik python -m pip install mysql-connector
-8. ketik python -m pip install cherrypy
-9. ketik python -m pip install mako
-10. Ubah html = "C:\directory-anda\folder-project-anda\static\pages\\" di core/directory.py
-11. Ubah 'tools.staticdir.root'  : 'C:\directory-anda\folder-project-anda\\' di core/directory.py
+\> python get-pip.py
 
-# Menjalankan aplikasi
+\> python
 
-python muffin.py \<IP_Adress\> \<Port\> \<Name\>
+\>\>\> import pip
 
-Contoh cara menjalankan: 
-python muffin.py 127.0.0.1 15000 DITAAJIPRATAMA
 
-Contoh cara menjalankan pada background: 
-nohup python muffin.py 127.0.0.1 15000 DITAAJIPRATAMA &
+\> python -m pip install mysql-connector
+
+\> python -m pip install cherrypy
+
+\> python -m pip install mako
+
+Change html = "C:\Your_Directory_Project_Folder\static\pages\\" in config/directory.py
+
+Change 'tools.staticdir.root'  : 'C:\Your_Directory_Project_Folder\\' in config/directory.py
+
+# Running Application
+
+python3 muffin.py \<IP_Adress\> \<Port\> \<Name\>
+
+Sample:
+
+python3 muffin.py 127.0.0.1 15000 YOUR_PROJECT_NAME
+
+Running it in background:
+
+nohup python3 muffin.py 127.0.0.1 15000 YOUR_PROJECT_NAME & disown
+
+Show running service in background:
+
+ps -ef | grep muffin.py
+
+Debugging:
+
+tail -f nohup.out
